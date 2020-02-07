@@ -46,19 +46,22 @@ public class Board {
 	}
 	
 	
-	public boolean movePiece(int i0, int j0, int i1, int j1, Piece p){
+	public boolean movePiece(int i0, int j0, int i1, int j1, Piece p)
+	{
 		return false;
 	}
 
 	public void setPiece(int iIn, int jIn, Piece p){
+		board[iIn][jIn].setPiece(p);
 	}
 	
 	public Piece getPiece(int iIn, int jIn){
-		return new Piece();
+		return board[iIn][jIn].getPiece();
 	}
 	
-	public boolean hasPiece(int i, int j){		
-		return false;
+	public boolean hasPiece(int i, int j)
+	{
+		return board[i][j].hasPiece();
 	}
 
 }

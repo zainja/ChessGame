@@ -11,6 +11,7 @@ public class DevBishopTest {
 	public void setUpforBishopA(){
 		b = new Board();
 		//Black pieces
+
 		b.setPiece(0,0,new Rook(PieceColour.BLACK));		
 		b.setPiece(0,1,new Knight(PieceColour.BLACK));		
 		b.setPiece(0,2,new Bishop(PieceColour.BLACK));		
