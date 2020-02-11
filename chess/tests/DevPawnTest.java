@@ -1,12 +1,11 @@
 package chess;
-
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 public class DevPawnTest {
 
-	Board b; 
+	Board b;
 
 	public void setUpforPawnA(){
 		b = new Board();

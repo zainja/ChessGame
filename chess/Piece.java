@@ -26,5 +26,15 @@ public abstract class Piece {
         this.row = row;
         this.column = column;
     }
+    public boolean checkSquare(int x, int y)
+    {
+        Square square = Board.getBoard()[x][y];
+        return square.hasPiece();
+    }
+    public boolean checkSquareColour(int x, int y)
+    {
+        Square square = Board.getBoard()[x][y];
+        return square.hasPiece() && (square.getPiece().getColour() != this.getColour());
+    }
     public abstract boolean  isLegitMove(int currentX, int currentY, int nextX, int nextY);
 }
