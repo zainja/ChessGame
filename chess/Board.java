@@ -18,27 +18,28 @@ public class Board {
 	}
 	
 	public void initialisePieces(){
+		setPiece(6,0,new Pawn(PieceColour.WHITE));
 		
 	}
 	
 	public void printBoard(){
 		System.out.print("\n  a b c d e f g h \n");
 		System.out.print("  -----------------\n");
-		String wsp=" ";String bar="|";
+		String wsp="\t";String bar="|";
 		
 		for (int i=0; i<board[0].length; i++){
 			int row=i+1;
 				for (int j=0; j<board[1].length; j++){
 					if ((j==0) && board[i][j].hasPiece())
-						System.out.print(row+" ");	
+						System.out.print(row+ board[i][j].getPiece().getSymbol());
 					else if ((j==0) && !board[i][j].hasPiece())
-						System.out.print(row+"  " );
+						System.out.print(row + wsp);
 					else if (board[i][j].hasPiece())					
-						System.out.print("|");					
+						System.out.print(bar + board[i][j].getPiece().getSymbol());
 					else					
-						System.out.print("| ");		
+						System.out.print(bar + wsp);
 				}				
-				System.out.print("  "+row+"\n");
+				System.out.print(wsp +row+"\n");
 		}
 		System.out.print("  -----------------");
 		System.out.print("\n  a b c d e f g h \n");
