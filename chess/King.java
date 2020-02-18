@@ -1,5 +1,3 @@
-package chess;
-
 public class King extends Piece{
     private final static String BLACK_KING = "\u265a";
     private final static String WHITE_KING = "\u2654";

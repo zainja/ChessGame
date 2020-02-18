@@ -1,7 +1,4 @@
-package chess;
-
-
-//This class is partially implemented 
+//This class is partially implemented
 public class Square
 {
 	private int i;

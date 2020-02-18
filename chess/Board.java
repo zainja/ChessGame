@@ -1,5 +1,3 @@
-package chess;
-
 
 //This class is partially implemented. Some methods need to have their body written, some other are fine as they are and other may need to be extended. 
 
@@ -19,7 +17,40 @@ public class Board {
 	
 	public void initialisePieces()
 	{
+		setPiece(0,0,new Rook(PieceColour.BLACK));
+		setPiece(0,1,new Knight(PieceColour.BLACK));
+		setPiece(0,2,new Bishop(PieceColour.BLACK));
+		setPiece(0,3,new Queen(PieceColour.BLACK));
+		setPiece(0,4,new King(PieceColour.BLACK));
+		setPiece(0,5,new Bishop(PieceColour.BLACK));
+		setPiece(0,6,new Knight(PieceColour.BLACK));
+		setPiece(0,7,new Rook(PieceColour.BLACK));
+		setPiece(1,0,new Pawn(PieceColour.BLACK));
+		setPiece(1,1,new Pawn(PieceColour.BLACK));
+		setPiece(1,2,new Pawn(PieceColour.BLACK));
+		setPiece(3,3,new Pawn(PieceColour.BLACK));
+		setPiece(1,4,new Pawn(PieceColour.BLACK));
+		setPiece(1,5,new Pawn(PieceColour.BLACK));
+		setPiece(1,6,new Pawn(PieceColour.BLACK));
+		setPiece(1,7,new Pawn(PieceColour.BLACK));
+
+		//White pieces
 		setPiece(6,0,new Pawn(PieceColour.WHITE));
+		setPiece(6,1,new Pawn(PieceColour.WHITE));
+		setPiece(6,2,new Pawn(PieceColour.WHITE));
+		setPiece(4,3,new Pawn(PieceColour.WHITE));
+		setPiece(4,4,new Pawn(PieceColour.WHITE));
+		setPiece(6,5,new Pawn(PieceColour.WHITE));
+		setPiece(6,6,new Pawn(PieceColour.WHITE));
+		setPiece(6,7,new Pawn(PieceColour.WHITE));
+		setPiece(7,0,new Rook(PieceColour.WHITE));
+		setPiece(7,1,new Knight(PieceColour.WHITE));
+		setPiece(7,2,new Bishop(PieceColour.WHITE));
+		setPiece(7,3,new Queen(PieceColour.WHITE));
+		setPiece(7,4,new King(PieceColour.WHITE));
+		setPiece(7,5,new Bishop(PieceColour.WHITE));
+		setPiece(7,6,new Knight(PieceColour.WHITE));
+		setPiece(7,7,new Rook(PieceColour.WHITE));
 		
 	}
 	

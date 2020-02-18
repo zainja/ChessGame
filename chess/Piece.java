@@ -1,5 +1,3 @@
-package chess;
-
 public abstract class Piece {
     protected PieceColour colour;
     private int row,column;

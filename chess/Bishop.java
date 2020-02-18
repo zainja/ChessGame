@@ -1,5 +1,3 @@
-package chess;
-
 public class Bishop extends Piece
 {
     private final static String BLACK_BISHOP = "\u265d";

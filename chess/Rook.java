@@ -1,5 +1,3 @@
-package chess;
-
 public class Rook extends Piece{
     private final static String BLACK_ROOK = "\u265c";
     private final static String WHITE_ROOK = "\u2656";

@@ -1,5 +1,3 @@
-package chess;
-
 public class Pawn extends Piece{
     private final static String BLACK_PAWN = "\u265f";
     private final static String WHITE_PAWN = "\u2659";
