@@ -17,12 +17,14 @@ public class Board {
 		return board;
 	}
 	
-	public void initialisePieces(){
+	public void initialisePieces()
+	{
 		setPiece(6,0,new Pawn(PieceColour.WHITE));
 		
 	}
 	
-	public void printBoard(){
+	public void printBoard()
+	{
 		System.out.print("\n  a b c d e f g h \n");
 		System.out.print("  -----------------\n");
 		String wsp=" ";String bar="|";
@@ -31,7 +33,7 @@ public class Board {
 			int row=i+1;
 				for (int j=0; j<board[1].length; j++){
 					if ((j==0) && board[i][j].hasPiece())
-						System.out.print(row+ board[i][j].getPiece().getSymbol());
+						System.out.print(row + board[i][j].getPiece().getSymbol());
 					else if ((j==0) && !board[i][j].hasPiece())
 						System.out.print(row + wsp);
 					else if (board[i][j].hasPiece())					

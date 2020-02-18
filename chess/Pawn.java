@@ -30,11 +30,7 @@ public class Pawn extends Piece{
         if(this.colour == PieceColour.WHITE)
         {
 
-            if(currentX == 7)
-            {
-                return (nextX ==  6 || nextX ==  5) && nextY == currentY;
-            }
-            else if(currentX == 6 && Board.getBoard()[currentX + 1][currentY].hasPiece())
+            if(currentX == 6)
             {
                 return (nextX ==  5 || nextX ==  4) && nextY == currentY;
             }
@@ -51,12 +47,7 @@ public class Pawn extends Piece{
         else
             {
 
-                if(currentX == 0)
-                {
-                    return (nextX ==  1 || nextX ==  2) && nextY == currentY;
-                }
-
-                else if(currentX == 1 && Board.getBoard()[currentX - 1][currentY].hasPiece())
+                if(currentX == 1)
                 {
                     return (nextX ==  2 || nextX ==  3) && nextY == currentY;
                 }
