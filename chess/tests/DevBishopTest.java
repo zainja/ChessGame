@@ -46,7 +46,7 @@ public class DevBishopTest {
 		b.setPiece(7,5,new Bishop(PieceColour.WHITE));		
 		b.setPiece(7,6,new Knight(PieceColour.WHITE));		
 		b.setPiece(7,7,new Rook(PieceColour.WHITE));
-		//b.printBoard();
+		b.printBoard();
 	}
 	
 	public void setUpforBishopB(){
@@ -86,7 +86,7 @@ public class DevBishopTest {
 		b.setPiece(7,5,new Bishop(PieceColour.WHITE));		
 		b.setPiece(7,6,new Knight(PieceColour.WHITE));		
 		b.setPiece(7,7,new Rook(PieceColour.WHITE));
-		//b.printBoard();
+		b.printBoard();
 	}
 	
 	
@@ -218,6 +218,13 @@ public class DevBishopTest {
 		Bishop b1 = (Bishop) b.getPiece(2,7);
 		assertFalse(b1.isLegitMove(2,7,2,0));
 	}
+//	@Test
+//	public void exper()
+//	{
+//		setUpforBishopA();
+//		Bishop b1 = (Bishop) b.getPiece(5,1);
+//		assertTrue(b1.isLegitMove(5,1, 3,3));
+//	}
 	
 	
 }

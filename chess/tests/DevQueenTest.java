@@ -44,7 +44,7 @@ public class DevQueenTest {
 		b.setPiece(7,5,new Bishop(PieceColour.WHITE));		
 		b.setPiece(7,6,new Knight(PieceColour.WHITE));		
 		b.setPiece(7,7,new Rook(PieceColour.WHITE));
-		//b.printBoard();
+		b.printBoard();
 	}
 
 	public void setUpforQueenB(){
@@ -78,7 +78,7 @@ public class DevQueenTest {
 		b.setPiece(7,5,new Bishop(PieceColour.WHITE));		
 		b.setPiece(7,6,new Knight(PieceColour.WHITE));		
 		b.setPiece(7,7,new Rook(PieceColour.WHITE));
-		//b.printBoard();
+		b.printBoard();
 	}
 	
 	public void setUpforQueenC(){
@@ -112,7 +112,7 @@ public class DevQueenTest {
 		b.setPiece(7,5,new Bishop(PieceColour.WHITE));		
 		b.setPiece(7,6,new Knight(PieceColour.WHITE));		
 		b.setPiece(7,7,new Rook(PieceColour.WHITE));
-		//b.printBoard();
+		b.printBoard();
 	}
 	
 	public void badMoveWhite0() {
@@ -122,7 +122,8 @@ public class DevQueenTest {
 	}
 	
 	@Test
-	public void badMoveWhite1() {
+	public void badMoveWhite1()
+	{
 		setUpforQueenB();
 		Queen q = (Queen) b.getPiece(7,3);
 		assertFalse(q.isLegitMove(7,3,7,0));
@@ -131,7 +132,8 @@ public class DevQueenTest {
 	
 	
 	@Test
-	public void badMoveWhite3() {
+	public void badMoveWhite3()
+	{
 		setUpforQueenC();
 		Queen q = (Queen) b.getPiece(2,0);
 		assertFalse(q.isLegitMove(2,0,0,2));
@@ -140,7 +142,8 @@ public class DevQueenTest {
 	
 	
 	@Test
-	public void badMoveWhite5() {
+	public void badMoveWhite5()
+	{
 		setUpforQueenC();
 		Queen q = (Queen) b.getPiece(2,0);
 		assertFalse(q.isLegitMove(2,0,0,0));
@@ -166,7 +169,8 @@ public class DevQueenTest {
 	
 	
 	@Test
-	public void goodMoveWhite6() {
+	public void goodMoveWhite6()
+	{
 		setUpforQueenC();
 		Queen q = (Queen) b.getPiece(2,0);
 		assertTrue(q.isLegitMove(2,0,2,7));
@@ -174,7 +178,8 @@ public class DevQueenTest {
 	
 	
 	@Test
-	public void goodMoveBlack1() {
+	public void goodMoveBlack1()
+	{
 		setUpforQueenB();
 		Queen q = (Queen) b.getPiece(0,3);
 		assertTrue(q.isLegitMove(0,3,3,0));
@@ -182,7 +187,8 @@ public class DevQueenTest {
 	
 	
 	@Test
-	public void goodMoveBlack3() {
+	public void goodMoveBlack3()
+	{
 		setUpforQueenB();
 		Queen q = (Queen) b.getPiece(0,3);
 		assertTrue(q.isLegitMove(0,3,3,6));
@@ -320,7 +326,7 @@ public class DevQueenTest {
 	}
 	
 	
-	
+	@Test
 	public void badMoveInitialBlack6() {
 		setUpforQueenA();
 		Queen q = (Queen) b.getPiece(0,3);
@@ -328,7 +334,7 @@ public class DevQueenTest {
 	}
 	
 
-	
+	@Test
 	public void badMoveInitialBlack8() {
 		setUpforQueenA();
 		Queen q = (Queen) b.getPiece(0,3);
@@ -336,7 +342,7 @@ public class DevQueenTest {
 	}
 	
 	
-	
+	@Test
 	public void badMoveInitialBlack10() {
 		setUpforQueenA();
 		Queen q = (Queen) b.getPiece(0,3);

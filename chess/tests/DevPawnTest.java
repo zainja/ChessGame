@@ -44,7 +44,7 @@ public class DevPawnTest {
 		b.setPiece(7,5,new Bishop(PieceColour.WHITE));		
 		b.setPiece(7,6,new Knight(PieceColour.WHITE));		
 		b.setPiece(7,7,new Rook(PieceColour.WHITE));
-		//b.printBoard();
+		b.printBoard();
 	}
 	
 	public void setUpforPawnB(){
@@ -84,7 +84,7 @@ public class DevPawnTest {
 		b.setPiece(7,5,new Bishop(PieceColour.WHITE));		
 		b.setPiece(7,6,new Knight(PieceColour.WHITE));		
 		b.setPiece(7,7,new Rook(PieceColour.WHITE));
-		//b.printBoard();
+		b.printBoard();
 	}
 	
 	

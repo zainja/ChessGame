@@ -23,16 +23,34 @@ public class Bishop extends Piece
     @Override
     public boolean isLegitMove(int currentX, int currentY, int nextX, int nextY)
     {
-        Square square = new Square(nextX, nextY);
-        if (square.hasPiece())
+        int xInc = (currentX < nextX) ? 1: -1;
+        int yInc = (currentY < nextY) ? 1: -1;
+        int checkX = currentX;
+        int checkY = currentY;
+        if(((currentX != nextX) && Math.abs((currentY - nextY) / (currentX - nextX)) == 1))
         {
-            if(square.getPiece().colour == this.colour)
+            while (checkX != nextX && checkY != nextY)
             {
-                return false;
+                checkX = checkX + xInc;
+                checkY = checkY + yInc;
+                // System.out.printf("Checking coords x = %d y = %d", checkX, checkY);
+                if(checkX == nextX && checkY == nextY &&
+                        (!Board.getBoard()[checkX][checkY].hasPiece() ||
+                        Board.getBoard()[checkX][checkY].getPiece().getColour() != this.getColour()))
+                {
+                    return true;
+                }
+                if(Board.getBoard()[checkX][checkY].hasPiece())
+                {
+                    return false;
+                }
+
+
             }
 
         }
 
-        return (currentX != nextX) && Math.abs((currentY - nextY) / (currentX - nextX)) == 1;
+        return false;
+
     }
 }

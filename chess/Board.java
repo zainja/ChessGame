@@ -25,7 +25,7 @@ public class Board {
 	public void printBoard(){
 		System.out.print("\n  a b c d e f g h \n");
 		System.out.print("  -----------------\n");
-		String wsp="\t";String bar="|";
+		String wsp=" ";String bar="|";
 		
 		for (int i=0; i<board[0].length; i++){
 			int row=i+1;

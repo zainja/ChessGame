@@ -24,7 +24,11 @@ public class Knight extends Piece{
 
         int xDistance = Math.abs(currentX - nextX);
         int yDistance = Math.abs(currentY - nextY);
+        // get the next square to move to
+        Square square = Board.getBoard()[nextX][nextY];
+
+        // check if there is a piece and the colour of that piece
         return (xDistance == 1 && yDistance == 2) ^ (xDistance == 2 && yDistance == 1) &&
-                (!this.checkSquare(nextX, nextY) || this.checkSquareColour(nextX, nextY));
+                (! square.hasPiece() ||  square.getPiece().getColour() != this.getColour());
     }
 }

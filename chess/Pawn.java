@@ -20,41 +20,59 @@ public class Pawn extends Piece{
     @Override
     public boolean isLegitMove(int currentX, int currentY, int nextX, int nextY)
     {
-        Square square = new Square(nextX, nextY);
-        if (square.hasPiece())
+        Square square = Board.getBoard()[nextX][nextY];
+
+        if(square.hasPiece() && currentY == nextY)
         {
             return false;
         }
-        boolean legit = true;
-        if (currentX == 0)
+
+        if(this.colour == PieceColour.WHITE)
         {
-            switch (this.colour)
+
+            if(currentX == 7)
             {
-                case BLACK:
-                    legit = currentY == nextY &&
-                            (nextX == currentX - 1 || nextX == currentX + 2);
-                    break;
-                case WHITE:
-                    legit = currentY == nextY &&
-                            (nextX == currentX + 1 || nextX == currentX - 2);
-                    break;
+                return (nextX ==  6 || nextX ==  5) && nextY == currentY;
+            }
+            else if(currentX == 6 && Board.getBoard()[currentX + 1][currentY].hasPiece())
+            {
+                return (nextX ==  5 || nextX ==  4) && nextY == currentY;
+            }
+            else if(Math.abs(currentY - nextY) == 1 && square.hasPiece())
+            {
+                return (!(square.getPiece().getColour() == this.colour)) && nextX == currentX - 1;
 
             }
+            else
+                {
+                    return (nextX == currentX - 1) && nextY == currentY;
+                }
         }
         else
             {
-                switch (this.colour)
-                {
-                case BLACK:
-                    legit = (currentY == nextY) && (nextX == currentX + 1);
-                    break;
-                case WHITE:
-                    legit = currentY == nextY && nextX == currentX - 1;
-                    break;
-                }
-            }
 
-        return legit;
+                if(currentX == 0)
+                {
+                    return (nextX ==  1 || nextX ==  2) && nextY == currentY;
+                }
+
+                else if(currentX == 1 && Board.getBoard()[currentX - 1][currentY].hasPiece())
+                {
+                    return (nextX ==  2 || nextX ==  3) && nextY == currentY;
+                }
+
+                else if(Math.abs(currentY - nextY) == 1 && square.hasPiece())
+                {
+                    return square.getPiece().getColour() != this.colour && nextX == currentX + 1;
+
+                }
+
+                else
+                {
+                    return (nextX == currentX + 1) && nextY == currentY;
+                }
+
+            }
 
 
     }
