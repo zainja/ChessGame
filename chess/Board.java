@@ -28,7 +28,7 @@ public class Board {
 		setPiece(1,0,new Pawn(PieceColour.BLACK));
 		setPiece(1,1,new Pawn(PieceColour.BLACK));
 		setPiece(1,2,new Pawn(PieceColour.BLACK));
-		setPiece(3,3,new Pawn(PieceColour.BLACK));
+		setPiece(1,3,new Pawn(PieceColour.BLACK));
 		setPiece(1,4,new Pawn(PieceColour.BLACK));
 		setPiece(1,5,new Pawn(PieceColour.BLACK));
 		setPiece(1,6,new Pawn(PieceColour.BLACK));
@@ -38,8 +38,8 @@ public class Board {
 		setPiece(6,0,new Pawn(PieceColour.WHITE));
 		setPiece(6,1,new Pawn(PieceColour.WHITE));
 		setPiece(6,2,new Pawn(PieceColour.WHITE));
-		setPiece(4,3,new Pawn(PieceColour.WHITE));
-		setPiece(4,4,new Pawn(PieceColour.WHITE));
+		setPiece(6,3,new Pawn(PieceColour.WHITE));
+		setPiece(6,4,new Pawn(PieceColour.WHITE));
 		setPiece(6,5,new Pawn(PieceColour.WHITE));
 		setPiece(6,6,new Pawn(PieceColour.WHITE));
 		setPiece(6,7,new Pawn(PieceColour.WHITE));
@@ -82,7 +82,15 @@ public class Board {
 	
 	public boolean movePiece(int i0, int j0, int i1, int j1, Piece p)
 	{
-		return false;
+		boolean kingDown = false;
+		board[i0][j0].removePiece();
+		if(hasPiece(i1, j1) && getPiece(i1, j1) instanceof King)
+		{
+			kingDown = true;
+		}
+		board[i1][j1].removePiece();
+		setPiece(i1, j1, p);
+		return kingDown;
 	}
 
 	public void setPiece(int iIn, int jIn, Piece p){

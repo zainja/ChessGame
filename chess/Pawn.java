@@ -30,6 +30,11 @@ public class Pawn extends Piece{
 
             if(currentX == 6)
             {
+                if((Math.abs(currentY - nextY) == 1 && square.hasPiece()))
+                {
+                    return (!(square.getPiece().getColour() == this.colour)) && nextX == currentX - 1;
+                }
+
                 return (nextX ==  5 || nextX ==  4) && nextY == currentY;
             }
             else if(Math.abs(currentY - nextY) == 1 && square.hasPiece())
@@ -47,6 +52,11 @@ public class Pawn extends Piece{
 
                 if(currentX == 1)
                 {
+                    if(Math.abs(currentY - nextY) == 1 && square.hasPiece())
+                    {
+                        return square.getPiece().getColour() != this.colour && nextX == currentX + 1;
+
+                    }
                     return (nextX ==  2 || nextX ==  3) && nextY == currentY;
                 }
 
