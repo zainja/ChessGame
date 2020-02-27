@@ -1,80 +1,119 @@
-import java.util.Scanner;
 
+package chess;
+import java.util.Scanner;
+/**
+ * Authored by: Zain Alden Jaffal
+ * Student-id: 10344889
+ * Date: 27/FEB/2020
+ *
+ * main game logic
+ */
 public class Game {
     private static boolean gameEnd=false;
     private static final int CONVERT_X_VALUE = 49;
     private static final int CONVERT_Y_VALUE = 97;
 
     public Game(){
+        // check input object
         CheckInput checkInput = new CheckInput();
         Board b = new Board();
         b.initialisePieces();
         b.printBoard();
         Scanner scanner = new Scanner(System.in);
+        // variables that hold the movement for pieces
         int x = 0, y = 0, x2 = 0, y2 = 0;
+        // the current piece colour
         PieceColour playerColour;
-        String origin;
-        String currentPlayer;
+        // origin string to select piece
+        String origin = "";
+        // destination input string
+        String destination = "";
+        // holds the value WHITE of BLACK
+        String currentPlayer = "";
+        boolean userEnd = false;
         boolean playerOne = true;
         while (!gameEnd){
+            // switch between players
             if(playerOne)
             {
                 currentPlayer = "White";
 
             }else {
-                currentPlayer = "Black 2";
+                currentPlayer = "Black";
             }
             System.out.printf("------ %s ------\n", currentPlayer);
+            playerColour = (playerOne) ? PieceColour.WHITE : PieceColour.BLACK;
             boolean correctInput = false;
             while (!correctInput) {
                 System.out.printf("%s Enter origin: \n", currentPlayer);
                 origin = scanner.next();
-                while (!checkInput.checkCoordinateValidity(origin))
+                while (!origin.equals("END") && !checkInput.checkCoordinateValidity(origin))
                 {
-                    System.out.println("Enter origin again: ");
+                    System.out.println("Invalid Selection \n Enter origin: ");
                     origin = scanner.next();
+                }
+                if(origin.equals("END"))
+                {
+                    userEnd = true;
+                    break;
                 }
                 x = iConverter(origin.charAt(0));
                 y = jConverter(origin.charAt(1));
 
-                playerColour = (playerOne) ? PieceColour.WHITE : PieceColour.BLACK;
-                while (!b.hasPiece(x, y) || b.getPiece(x, y).getColour() != playerColour)
+                if (!b.hasPiece(x, y) || b.getPiece(x, y).getColour() != playerColour)
                 {
-                    System.out.println("Enter origin again");
-                    origin = scanner.next();
-                    if (checkInput.checkCoordinateValidity(origin))
-                    {
-                        x = iConverter(origin.charAt(0));
-                        y = jConverter(origin.charAt(1));
-                    }
+                    System.out.println("Invalid Selection");
+                    continue;
                 }
 
                 System.out.printf("Selected piece %s \n", b.getPiece(x, y).getSymbol());
                 System.out.printf("%s Enter destination: \n", currentPlayer);
-                String destination = scanner.next();
-                while (!checkInput.checkCoordinateValidity(destination)) {
+                destination = scanner.next();
+                while (!destination.equals("END") && !checkInput.checkCoordinateValidity(destination)) {
                     System.out.printf("%s Enter destination again: \n", currentPlayer);
                     destination = scanner.next();
+                }
+                if (destination.equals("END"))
+                {
+                    userEnd = true;
+                    break;
                 }
                 x2 = iConverter(destination.charAt(0));
                 y2 = jConverter(destination.charAt(1));
                 correctInput = b.getPiece(x, y).isLegitMove(x, y, x2, y2);
+                if(!correctInput)
+                {
+                    System.out.println("Enter details again movement is wrong");
+                }
             }
+            // switch to other players
             playerOne = !playerOne;
+            // for deleting the previous board to show the new board in the same place
             System.out.flush();
+            // blocking so gameEnd will not be assigned a new value
+            if (userEnd)
+            {
+                break;
+            }
             gameEnd = b.movePiece(x, y, x2, y2, b.getPiece(x,y));
             b.printBoard();
         }
-        if(playerOne)
+        if(!userEnd)
         {
-            System.out.println("Game ended Player 1 Won");
+            if(playerOne)
+            {
+                System.out.println("Game ended White Won");
 
+            }else
+            {
+                System.out.println("Game ended Black Won");
+            }
         }else
             {
-                System.out.println("Game ended Player 2 Won");
+                System.out.println("Game End");
             }
-    }
 
+    }
 
     private static int iConverter(char a)
     {

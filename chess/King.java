@@ -1,3 +1,4 @@
+package chess;
 public class King extends Piece{
     private final static String BLACK_KING = "\u265a";
     private final static String WHITE_KING = "\u2654";
@@ -25,6 +26,7 @@ public class King extends Piece{
 
         // final result fo the checking
         boolean movementEval = false;
+        // the case xMovement is 0 then there is y movement
         switch (xMovement)
         {
             case 0:
@@ -34,6 +36,8 @@ public class King extends Piece{
                 movementEval = yMovement == 0 || yMovement == 1;
                 break;
         }
+        //check if there is a piece
+        // if there is check the colour
         return (!square.hasPiece() || square.getPiece().getColour() != this.getColour()) && movementEval;
     }
 }

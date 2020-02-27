@@ -1,6 +1,11 @@
-
-//This class is partially implemented. Some methods need to have their body written, some other are fine as they are and other may need to be extended. 
-
+package chess;
+/**
+ * Authored by: Zain Alden Jaffal
+ * Student-id: 10344889
+ * Date: 27/FEB/2020
+ *
+ * Board
+ */
 public class Board {
 	private static Square [][] board = new Square[8][8];
 
@@ -76,10 +81,20 @@ public class Board {
 		}
 		System.out.print("  -----------------");
 		System.out.print("\n  a b c d e f g h \n");
-	
 	}
-	
-	
+
+	/**
+	 * removes the piece on i, j
+	 * checks the piece in i1, j1 is a king
+	 * sets king down
+	 * moves the original piece to the desired location
+	 * @param i0 current i
+	 * @param j0 current j
+	 * @param i1 next i
+	 * @param j1 next j
+	 * @param p the piece to move
+	 * @return if the piece moved killed a king
+	 */
 	public boolean movePiece(int i0, int j0, int i1, int j1, Piece p)
 	{
 		boolean kingDown = false;

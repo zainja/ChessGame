@@ -1,4 +1,12 @@
-//This class is partially implemented
+package chess;
+
+/**
+ * Authored by: Zain Alden Jaffal
+ * Student-id: 10344889
+ * Date: 27/FEB/2020
+ *
+ * Pawn Piece
+ */
 public class Square
 {
 	private int i;
@@ -14,19 +22,25 @@ public class Square
 	{
 		return piece;
 	}
+
+	/**
+	 * assigns the piece into the square object
+	 * @param piece
+	 * updates the coordinates in piece
+	 * sets the has piece true
+	 */
 	public void setPiece(Piece piece)
 	{
 		this.piece = piece;
 		this.piece.updateCoordinates(i,j);
 		this.hasPiece = true;
 	}
+
 	public void removePiece()
 	{
 		this.piece = null;
 		this.hasPiece = false;
 	}
-
-
 
 	public boolean hasPiece()
 	{

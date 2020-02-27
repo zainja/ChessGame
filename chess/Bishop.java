@@ -1,3 +1,11 @@
+package chess;
+/**
+ * Authored by: Zain Alden Jaffal
+ * Student-id: 10344889
+ * Date: 27/FEB/2020
+ *
+ * Bishop Piece
+ */
 public class Bishop extends Piece
 {
     private final static String BLACK_BISHOP = "\u265d";

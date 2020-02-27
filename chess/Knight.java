@@ -1,3 +1,4 @@
+package chess;
 public class Knight extends Piece{
     private final static String BLACK_KNIGHT = "\u265E";
     private final static String WHITE_KNIGHT = "\u2658";
