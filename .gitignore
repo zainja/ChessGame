@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 *.class
 out
 bin
 *.iml
 .idea
+=======
+# Default ignored files
+/.idea/workspace.xml
+/.idea
+>>>>>>> master
