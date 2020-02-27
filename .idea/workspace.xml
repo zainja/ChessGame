@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1156645b-30ba-40a4-bf63-c8cd007018e5" name="Default Changelist" comment="git ignore">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/CheckInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/CheckInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/Knight.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/Knight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/Piece.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/Piece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/PieceColour.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/PieceColour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/Rook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/tests/DevBishopTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/tests/DevBishopTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/tests/DevCheckInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/tests/DevCheckInputTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/tests/DevKingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/tests/DevKingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/tests/DevKnightTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/tests/DevKnightTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/tests/DevPawnTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/tests/DevPawnTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/tests/DevQueenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/tests/DevQueenTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chess/tests/DevRookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/chess/tests/DevRookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run-tests.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run-tests.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YIaFGcCdJ2cWvjcvi3BunpwJMU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../first_group_project" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Game">
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chess.Game" />
+      <module name="comp16412-coursework-1_r60019zj" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chess.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DevQueenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="comp16412-coursework-1_r60019zj" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DevQueenTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Game" />
+        <item itemvalue="JUnit.DevQueenTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1156645b-30ba-40a4-bf63-c8cd007018e5" name="Default Changelist" comment="" />
+      <created>1582632456486</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582632456486</updated>
+      <workItem from="1582632458953" duration="2329000" />
+      <workItem from="1582635587293" duration="56000" />
+      <workItem from="1582643785625" duration="779000" />
+      <workItem from="1582644578285" duration="2980000" />
+      <workItem from="1582760228865" duration="359000" />
+      <workItem from="1582802208237" duration="32000" />
+      <workItem from="1582803338592" duration="381000" />
+      <workItem from="1582816110340" duration="2597000" />
+      <workItem from="1582835193706" duration="7000" />
+      <workItem from="1582839822764" duration="143000" />
+    </task>
+    <task id="LOCAL-00001" summary="git ignore">
+      <created>1582632658550</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582632658550</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="git ignore" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582803397363">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1582803397363" />
+    <state x="768" y="265" width="374" height="584" key="#com.intellij.ide.util.MemberChooser" timestamp="1582634178646">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="768" y="265" width="374" height="584" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1582634178646" />
+    <state x="801" y="445" width="308" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582632550194">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="801" y="445" width="308" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1582632550194" />
+    <state x="425" y="97" width="1059" height="919" key="CommitChangelistDialog2" timestamp="1582803671137">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="425" y="97" width="1059" height="919" key="CommitChangelistDialog2/0.27.1920.1053@0.27.1920.1053" timestamp="1582803671137" />
+    <state x="551" y="261" width="798" height="597" key="FileChooserDialogImpl" timestamp="1582803653282">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="551" y="261" width="798" height="597" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1582803653282" />
+    <state width="1874" height="274" key="GridCell.Tab.0.bottom" timestamp="1582803718873">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="274" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1582803718873" />
+    <state width="1874" height="274" key="GridCell.Tab.0.center" timestamp="1582803718873">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="274" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1582803718873" />
+    <state width="1874" height="274" key="GridCell.Tab.0.left" timestamp="1582803718873">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="274" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1582803718873" />
+    <state width="1874" height="274" key="GridCell.Tab.0.right" timestamp="1582803718873">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="274" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1582803718873" />
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1582648039331">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1582648039331" />
+    <state width="1874" height="340" key="GridCell.Tab.1.center" timestamp="1582648039330">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1582648039330" />
+    <state width="1874" height="340" key="GridCell.Tab.1.left" timestamp="1582648039329">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1582648039329" />
+    <state width="1874" height="340" key="GridCell.Tab.1.right" timestamp="1582648039331">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1874" height="340" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1582648039331" />
+    <state x="443" y="130" width="1024" height="852" key="SettingsEditor" timestamp="1582803696658">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="443" y="130" width="1024" height="852" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1582803696657" />
+    <state x="621" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1582839841200">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="621" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1582839841200" />
+    <state x="288" y="143" width="1334" height="827" key="new project wizard" timestamp="1582635641304">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="288" y="143" width="1334" height="827" key="new project wizard/0.27.1920.1053@0.27.1920.1053" timestamp="1582635641304" />
+    <state x="623" y="259" width="719" height="678" key="search.everywhere.popup" timestamp="1582816294659">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="259" width="719" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1582816294659" />
+  </component>
+</project>
