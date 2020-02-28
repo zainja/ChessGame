@@ -7,14 +7,12 @@ package chess;
  *
  * Pawn Piece
  */
-public class Pawn extends Piece{
+public class Pawn extends Piece {
     private final static String BLACK_PAWN = "\u265f";
     private final static String WHITE_PAWN = "\u2659";
-    public Pawn(PieceColour colour)
-    {
+    public Pawn(PieceColour colour) {
         this.colour = colour;
-        switch (this.colour)
-        {
+        switch (this.colour) {
             case BLACK:
                 setSymbol(BLACK_PAWN);
                 break;
@@ -25,61 +23,54 @@ public class Pawn extends Piece{
     }
 
     @Override
-    public boolean isLegitMove(int currentX, int currentY, int nextX, int nextY)
-    {
+    public boolean isLegitMove(int currentX, int currentY, int nextX, int nextY) {
         Square square = Board.getBoard()[nextX][nextY];
 
+        // check if there is a piece in front of the piece
         if(square.hasPiece() && currentY == nextY)
         {
             return false;
         }
 
-        if(this.colour == PieceColour.WHITE)
-        {
+        if(this.colour == PieceColour.WHITE) {
             // first movement
-            if(currentX == 6)
-            {
-                if((Math.abs(currentY - nextY) == 1 && square.hasPiece()))
-                {
-                    return (!(square.getPiece().getColour() == this.colour)) && nextX == currentX - 1;
+            if(currentX == 6) {
+                // to move diagonally you need a piece
+                if((Math.abs(currentY - nextY) == 1 && square.hasPiece()) && (square.getPiece().getColour() == colour)) {
+                    return nextX == currentX - 1;
                 }
                 // one or two steps movement
+                // no need to check for the piece here
                 return (nextX ==  5 || nextX ==  4) && nextY == currentY;
             }
-            // side movement
-            else if(Math.abs(currentY - nextY) == 1 && square.hasPiece())
-            {
-                return ((square.getPiece().getColour() != this.colour)) && nextX == currentX - 1;
-
+            // side movement general
+            else if(Math.abs(currentY - nextY) == 1 && square.hasPiece() &&
+                    (square.getPiece().getColour() != this.colour)) {
+                return nextX == currentX - 1;
             }
             // check for one step movement
-            else
-                {
+            else {
                     return (nextX == currentX - 1) && nextY == currentY;
                 }
         }
         // checking for black pawns
-        else
-            {
+        else {
                 // first movement
-                if(currentX == 1)
-                {
-                    if(Math.abs(currentY - nextY) == 1 && square.hasPiece())
-                    {
-                        return square.getPiece().getColour() != this.colour && nextX == currentX + 1;
+                if(currentX == 1) {
+                    if(Math.abs(currentY - nextY) == 1 && square.hasPiece() &&
+                            (square.getPiece().getColour() != this.colour)) {
+                        return nextX == currentX + 1;
 
                     }
                     return (nextX ==  2 || nextX ==  3) && nextY == currentY;
                 }
-                // side movement
-                else if(Math.abs(currentY - nextY) == 1 && square.hasPiece())
-                {
+                // side movement general case
+                else if(Math.abs(currentY - nextY) == 1 && square.hasPiece()) {
                     return square.getPiece().getColour() != this.colour && nextX == currentX + 1;
 
                 }
                 // single step movement
-                else
-                {
+                else {
                     return (nextX == currentX + 1) && nextY == currentY;
                 }
 
