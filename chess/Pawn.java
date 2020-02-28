@@ -36,7 +36,7 @@ public class Pawn extends Piece {
             // first movement
             if(currentX == 6) {
                 // to move diagonally you need a piece
-                if((Math.abs(currentY - nextY) == 1 && square.hasPiece()) && (square.getPiece().getColour() == colour)) {
+                if((Math.abs(currentY - nextY) == 1 && square.hasPiece()) && (square.getPiece().getColour() != this.colour)) {
                     return nextX == currentX - 1;
                 }
                 // one or two steps movement
