@@ -1,4 +1,7 @@
 package chess;
+
+import java.util.HashMap;
+
 /**
  * Authored by: Zain Alden Jaffal
  * Student-id: 10344889
@@ -7,14 +10,21 @@ package chess;
  * Board
  */
 public class Board {
+	static HashMap<Integer,Square> squareHashMap = new HashMap<>();
 	private static Square [][] board = new Square[8][8];
-
 	public Board(){
+		int counter = 0;
 		for (int i=0; i<board[0].length; i++){
-			for (int j=0; j<board[1].length; j++)
-					board[i][j]=new Square(i,j);
-		}		
-	}	
+			for (int j=0; j<board[1].length; j++){
+				board[i][j]=new Square(i,j);
+				squareHashMap.put(counter,board[i][j]);
+				counter ++;
+			}
+		}
+	}
+	public Board(Square[][] board){
+		Board.board = board;
+	}
 
 	public static Square[][] getBoard(){
 		return board;
@@ -95,9 +105,9 @@ public class Board {
 	 * @param p the piece to move
 	 * @return if the piece moved killed a king
 	 */
-	public boolean movePiece(int i0, int j0, int i1, int j1, Piece p)
-	{
+	public boolean movePiece(int i0, int j0, int i1, int j1, Piece p) {
 		boolean kingDown = false;
+		System.out.println("Board.movePiece \n" + p.toJSON());
 		board[i0][j0].removePiece();
 		if(hasPiece(i1, j1) && getPiece(i1, j1) instanceof King)
 		{
@@ -111,6 +121,10 @@ public class Board {
 	public void setPiece(int iIn, int jIn, Piece p){
 		board[iIn][jIn].setPiece(p);
 	}
+
+	public void setPiece(Piece p){
+		board[p.getRow()][p.getColumn()].setPiece(p);
+	}
 	
 	public Piece getPiece(int iIn, int jIn){
 		return board[iIn][jIn].getPiece();
@@ -120,5 +134,43 @@ public class Board {
 	{
 		return board[i][j].hasPiece();
 	}
+
+	public String toJSON(){
+		int squareNumber = 0;
+		StringBuilder jObject = new StringBuilder("{ \"board\": [ ");
+		for (Square [] squareRow:
+			 board) {
+			for (Square square:
+				 squareRow) {
+				jObject.append(square.toJSON());
+				if (squareNumber < 63){
+					jObject.append(",");
+				}
+				jObject.append("\n");
+				squareNumber ++;
+
+			}
+
+		}
+		jObject.append("]}");
+		return jObject.toString();
+	}
+	public static Board fromJSON(String json){
+		Square [][] squaresArray = new Square[8][8];
+		int currentRow = 0;
+		int currentColumn = 0;
+		String[] boardProperty = json.split("\\[");
+		String [] squares = boardProperty[1].split("\\},");
+		for (String square: squares) {
+			squaresArray[currentRow][currentColumn] = Square.fromJSON(square);
+			currentColumn ++;
+			if (currentColumn == 8){
+				currentColumn = 0;
+				currentRow ++;
+			}
+		}
+		return new Board(squaresArray);
+	}
+
 
 }

@@ -25,6 +25,7 @@ public class Bishop extends Piece
         }
     }
 
+
     @Override
     public boolean isLegitMove(int currentX, int currentY, int nextX, int nextY) {
         int xInc = (currentX < nextX) ? 1: -1;
